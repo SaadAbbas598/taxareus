@@ -278,6 +278,6 @@ For support, issues, or feature requests, please contact our team at info@taxare
 
 ---
 
-**Built with ❤️ for Pakistan's Taxpayers**
+**Built SoftSincs team ❤️ for Pakistan's Taxpayers**
 
 Last Updated: May 2026
