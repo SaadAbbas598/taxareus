@@ -1,20 +1,20 @@
 import React, { useState } from 'react';
 import './MobileApp.css';
-import { FiHome, FiSearch, FiMail, FiSettings } from 'react-icons/fi';
+import { FiHome, FiSearch, FiMail, FiSettings, FiClipboard, FiUsers, FiBriefcase, FiUser, FiDollarSign, FiCreditCard, FiTrendingUp, FiHelpCircle, FiBell, FiFolder, FiMessageSquare, FiBarChart2, FiPlay, FiDownload } from 'react-icons/fi';
 
 const MobileApp = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   const services = [
-    { icon: '📋', name: 'Personal Tax', label: 'Filing' },
-    { icon: '👨‍👩‍👧‍👦', name: 'Family Tax', label: 'Filing' },
-    { icon: '🏢', name: 'NTN', label: 'Registration' },
-    { icon: '👤', name: 'IRIS Profile', label: 'Update' },
-    { icon: '🏭', name: 'Business', label: 'Incorporation' },
-    { icon: '💼', name: 'GST', label: 'Registration' },
-    { icon: '💳', name: 'Service', label: 'Charges' },
-    { icon: '💰', name: 'Salary Tax', label: 'Calculator' },
-    { icon: '❓', name: 'FAQ', label: '' },
+    { icon: FiClipboard, name: 'Personal Tax', label: 'Filing' },
+    { icon: FiUsers, name: 'Family Tax', label: 'Filing' },
+    { icon: FiBriefcase, name: 'NTN', label: 'Registration' },
+    { icon: FiUser, name: 'IRIS Profile', label: 'Update' },
+    { icon: FiDollarSign, name: 'Business', label: 'Incorporation' },
+    { icon: FiBriefcase, name: 'GST', label: 'Registration' },
+    { icon: FiCreditCard, name: 'Service', label: 'Charges' },
+    { icon: FiTrendingUp, name: 'Salary Tax', label: 'Calculator' },
+    { icon: FiHelpCircle, name: 'FAQ', label: '' },
   ];
 
   return (
@@ -37,11 +37,11 @@ const MobileApp = () => {
                   {/* Header with Profile */}
                   <div className="app-header-section">
                     <div className="user-profile">
-                      <div className="profile-avatar">👤</div>
+                      <div className="profile-avatar"><FiUser size={28} /></div>
                       <div className="user-info">
                         <h4>Hi, Aslam</h4>
                       </div>
-                      <span className="notification-bell">🔔</span>
+                      <FiBell className="notification-bell" size={24} />
                     </div>
                   </div>
 
@@ -53,18 +53,21 @@ const MobileApp = () => {
                       <p className="card-number">4756 •••• •••• 8</p>
                       <p className="card-welcome">Welcome to ITax</p>
                     </div>
-                    <div className="card-illustration">🎯</div>
+                    <div className="card-illustration"><FiHome size={40} /></div>
                   </div>
 
                   {/* Services Grid */}
                   <div className="services-grid">
-                    {services.map((service, idx) => (
-                      <div key={idx} className="service-card">
-                        <div className="service-icon">{service.icon}</div>
-                        <p className="service-name">{service.name}</p>
-                        {service.label && <p className="service-label">{service.label}</p>}
-                      </div>
-                    ))}
+                    {services.map((service) => {
+                      const IconComponent = service.icon;
+                      return (
+                        <div key={service.name} className="service-card">
+                          <IconComponent className="service-icon" size={24} />
+                          <p className="service-name">{service.name}</p>
+                          {service.label && <p className="service-label">{service.label}</p>}
+                        </div>
+                      );
+                    })}
                   </div>
 
                   {/* Bottom Navigation */}
@@ -122,29 +125,29 @@ const MobileApp = () => {
             {/* Download Buttons */}
             <div className="download-buttons">
               <button className="btn btn-primary">
-                <span className="app-store-icon">🍎</span> App Store
+                <FiDownload className="app-store-icon" size={20} /> App Store
               </button>
               <button className="btn btn-secondary">
-                <span className="play-store-icon">🎮</span> Play Store
+                <FiPlay className="play-store-icon" size={20} /> Play Store
               </button>
             </div>
 
             {/* Features */}
             <div className="app-features">
               <div className="app-feature">
-                <span className="feature-icon">📊</span>
+                <FiBarChart2 className="feature-icon" size={28} />
                 <p>Real-time Dashboard</p>
               </div>
               <div className="app-feature">
-                <span className="feature-icon">📁</span>
+                <FiFolder className="feature-icon" size={28} />
                 <p>Document Upload</p>
               </div>
               <div className="app-feature">
-                <span className="feature-icon">💬</span>
+                <FiMessageSquare className="feature-icon" size={28} />
                 <p>Expert Chat Support</p>
               </div>
               <div className="app-feature">
-                <span className="feature-icon">🔔</span>
+                <FiBell className="feature-icon" size={28} />
                 <p>Instant Notifications</p>
               </div>
             </div>

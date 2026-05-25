@@ -73,7 +73,8 @@ export default function ExpandableTaxCalculator() {
   };
 
   return (
-    <div className="expandable-tax-root" aria-live="polite">
+    <section id="calculator">
+      <div className="expandable-tax-root" aria-live="polite">
       <AnimatePresence>
         {!open && (
           <motion.button
@@ -172,5 +173,6 @@ export default function ExpandableTaxCalculator() {
         )}
       </AnimatePresence>
     </div>
+    </section>
   );
 }

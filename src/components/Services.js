@@ -1,47 +1,47 @@
 import React from 'react';
-import { FiArrowRight } from 'react-icons/fi';
+import { FiArrowRight, FiUser, FiClipboard, FiBriefcase, FiFileText, FiTrendingUp, FiShield } from 'react-icons/fi';
 import './Services.css';
 
 const Services = () => {
   const services = [
     {
       id: 1,
-      icon: '👤',
+      icon: FiUser,
       title: 'Personal Tax Filing',
       description: 'File your personal income tax return with ease. Our experts handle all the documentation.',
       link: 'Learn More'
     },
     {
       id: 2,
-      icon: '📋',
+      icon: FiClipboard,
       title: 'Tax Registrations',
       description: 'Get your NTN and CNIC registrations completed quickly with proper FBR compliance.',
       link: 'Learn More'
     },
     {
       id: 3,
-      icon: '💼',
+      icon: FiBriefcase,
       title: 'Business Representation',
       description: 'Professional tax representation for your business with complete filing support.',
       link: 'Learn More'
     },
     {
       id: 4,
-      icon: '📄',
+      icon: FiFileText,
       title: 'NTN Registration',
       description: 'Complete NTN registration services for individuals and businesses with instant approval.',
       link: 'Learn More'
     },
     {
       id: 5,
-      icon: '💰',
+      icon: FiTrendingUp,
       title: 'Tax Refunds',
       description: 'Maximize your tax refunds with our expert analysis and strategic filing approach.',
       link: 'Learn More'
     },
     {
       id: 6,
-      icon: '🛡️',
+      icon: FiShield,
       title: 'Audit Support',
       description: 'Complete audit support and representation with FBR and tax authorities.',
       link: 'Learn More'
@@ -75,21 +75,24 @@ const Services = () => {
         </div>
 
         <div className="services-grid">
-          {services.map((service) => (
-            <div key={service.id} className="service-card">
-              <div className="service-icon-wrapper">
-                <div className="service-icon">{service.icon}</div>
+          {services.map((service) => {
+            const IconComponent = service.icon;
+            return (
+              <div key={service.id} className="service-card">
+                <div className="service-icon-wrapper">
+                  <IconComponent className="service-icon" size={48} />
+                </div>
+                
+                <h3 className="service-title">{service.title}</h3>
+                
+                <p className="service-description">{service.description}</p>
+                
+                <a href="#contact" className="service-link">
+                  {service.link} <FiArrowRight size={16} />
+                </a>
               </div>
-              
-              <h3 className="service-title">{service.title}</h3>
-              
-              <p className="service-description">{service.description}</p>
-              
-              <a href="#contact" className="service-link">
-                {service.link} <FiArrowRight size={16} />
-              </a>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>

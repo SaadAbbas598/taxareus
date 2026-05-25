@@ -170,7 +170,9 @@
 }
 
 .summary-icon {
-  font-size: 2rem;
+  color: var(--primary-color);
+  stroke: var(--primary-color);
+  stroke-width: 1.5;
   flex-shrink: 0;
 }
 

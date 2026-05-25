@@ -1,0 +1,109 @@
+.how-it-works {
+  padding: 100px 20px;
+  background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%);
+  position: relative;
+}
+
+.how-it-works .section-header {
+  margin-bottom: 70px;
+}
+
+.how-it-works .section-heading {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: #1a1a1a;
+  margin-bottom: 16px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.how-it-works .section-subheading {
+  font-size: 1.15rem;
+  color: #6b7280;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.steps-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 32px;
+  max-width: 1100px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.step-card {
+  background: white;
+  padding: 40px 30px;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  text-align: center;
+  position: relative;
+  border-left: 4px solid #c41e3a;
+}
+
+.step-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 16px 40px rgba(196, 30, 58, 0.12);
+  border-left-color: #a01830;
+}
+
+.step-number {
+  font-size: 2.8rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #c41e3a 0%, #a01830 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 16px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.step-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 12px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.step-description {
+  font-size: 0.98rem;
+  color: #6b7280;
+  line-height: 1.7;
+}
+
+.step-connector {
+  position: absolute;
+  right: -20px;
+  top: 50%;
+  width: 40px;
+  height: 3px;
+  background: linear-gradient(90deg, #c41e3a, transparent);
+  transform: translateY(-50%);
+  border-radius: 2px;
+}
+
+@media (max-width: 768px) {
+  .how-it-works {
+    padding: 60px 20px;
+  }
+
+  .how-it-works .section-heading {
+    font-size: 2rem;
+  }
+
+  .steps-container {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .step-connector {
+    display: none;
+  }
+
+  .step-card {
+    padding: 32px 24px;
+  }
+}

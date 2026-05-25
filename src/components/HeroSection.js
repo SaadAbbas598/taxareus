@@ -1,5 +1,5 @@
 import React from 'react';
-import { FiArrowRight } from 'react-icons/fi';
+import { FiArrowRight, FiBarChart2, FiClipboard, FiMessageSquare, FiSettings, FiUser, FiDollarSign, FiCheck, FiSmartphone } from 'react-icons/fi';
 import './HeroSection.css';
 
 const HeroSection = () => {
@@ -64,19 +64,19 @@ const HeroSection = () => {
 
               <div className="phone-buttons">
                 <button className="phone-btn">
-                  <span className="btn-icon">📊</span>
+                  <FiBarChart2 className="btn-icon" size={24} />
                   <span>Dashboard</span>
                 </button>
                 <button className="phone-btn">
-                  <span className="btn-icon">📝</span>
+                  <FiClipboard className="btn-icon" size={24} />
                   <span>Filing</span>
                 </button>
                 <button className="phone-btn">
-                  <span className="btn-icon">💬</span>
+                  <FiMessageSquare className="btn-icon" size={24} />
                   <span>Support</span>
                 </button>
                 <button className="phone-btn">
-                  <span className="btn-icon">⚙️</span>
+                  <FiSettings className="btn-icon" size={24} />
                   <span>Settings</span>
                 </button>
               </div>
@@ -84,10 +84,10 @@ const HeroSection = () => {
           </div>
 
           {/* Floating decorative icons */}
-          <div className="floating-icon icon-1">👤</div>
-          <div className="floating-icon icon-2">💰</div>
-          <div className="floating-icon icon-3">✓</div>
-          <div className="floating-icon icon-4">📱</div>
+          <div className="floating-icon icon-1"><FiUser size={40} /></div>
+          <div className="floating-icon icon-2"><FiDollarSign size={40} /></div>
+          <div className="floating-icon icon-3"><FiCheck size={40} /></div>
+          <div className="floating-icon icon-4"><FiSmartphone size={40} /></div>
         </div>
       </div>
     </section>

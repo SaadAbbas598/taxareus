@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
+import { FiBarChart2 } from 'react-icons/fi';
 import './TaxCalculator.css';
 
 const taxSlabs = [
@@ -55,20 +56,20 @@ const TaxCalculator = () => {
   }, [grossIncome, year, calculateTax]);
 
   const handleSliderChange = (e) => {
-    setGrossIncome(parseInt(e.target.value));
+    setGrossIncome(Number.parseInt(e.target.value));
   };
 
   const handleInputChange = (e) => {
-    const value = e.target.value.replace(/[^0-9]/g, '');
+    const value = e.target.value.replace(/\D/g, '');
     if (value === '') {
       setGrossIncome(0);
     } else {
-      setGrossIncome(parseInt(value));
+      setGrossIncome(Number.parseInt(value));
     }
   };
 
   const formatCurrency = (value) => {
-    return parseFloat(value).toLocaleString('en-PK', {
+    return Number.parseFloat(value).toLocaleString('en-PK', {
       style: 'currency',
       currency: 'PKR',
       minimumFractionDigits: 0,
@@ -152,7 +153,7 @@ const TaxCalculator = () => {
             </div>
 
             <div className="tax-summary">
-              <div className="summary-icon">📊</div>
+              <FiBarChart2 className="summary-icon" size={32} />
               <div>
                 <p className="summary-label">Tax Summary</p>
                 <p className="summary-text">
@@ -169,7 +170,7 @@ const TaxCalculator = () => {
 
             <div className="tax-slabs">
               {taxSlabs.map((slab, index) => (
-                <div key={index} className="tax-slab-item">
+                <div key={`slab-${detail.range}`} className="tax-slab-item">
                   <div className="slab-label">
                     <span className="slab-range">
                       Rs. {slab.from.toLocaleString()} - {slab.to === Infinity ? '∞' : ('Rs. ' + slab.to.toLocaleString())}
@@ -195,7 +196,7 @@ const TaxCalculator = () => {
                 <h4 className="breakdown-heading">Your Tax Breakdown</h4>
                 <div className="breakdown-items">
                   {results.details.map((detail, idx) => (
-                    <div key={idx} className="breakdown-item">
+                    <div key={`breakdown-${detail.range}`} className="breakdown-item">
                       <span className="breakdown-label">
                         {detail.rate}% on {detail.range}
                       </span>

@@ -1,4 +1,5 @@
 import React from 'react';
+import { FiCheck, FiTrendingUp, FiDollarSign, FiShield } from 'react-icons/fi';
 import './Pricing.css';
 
 const Pricing = () => {
@@ -34,8 +35,8 @@ const Pricing = () => {
 
           <div className="features-checklist">
             {features.map((feature, index) => (
-              <div key={index} className="feature-check-item">
-                <span className="check-icon">✓</span>
+              <div key={`feature-${feature}`} className="feature-check-item">
+                <FiCheck className="check-icon" size={20} />
                 <span className="feature-text">{feature}</span>
               </div>
             ))}
@@ -52,19 +53,19 @@ const Pricing = () => {
 
         <div className="pricing-benefits">
           <div className="benefit-item">
-            <span className="benefit-icon">🚀</span>
+            <FiTrendingUp className="benefit-icon" size={32} />
             <p>Fast Processing</p>
           </div>
           <div className="benefit-item">
-            <span className="benefit-icon">100%</span>
+            <FiCheck className="benefit-icon" size={32} />
             <p>Accuracy</p>
           </div>
           <div className="benefit-item">
-            <span className="benefit-icon">💰</span>
+            <FiDollarSign className="benefit-icon" size={32} />
             <p>Maximum Refunds</p>
           </div>
           <div className="benefit-item">
-            <span className="benefit-icon">🛡️</span>
+            <FiShield className="benefit-icon" size={32} />
             <p>Secure & Confidential</p>
           </div>
         </div>

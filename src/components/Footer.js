@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FiMail, FiPhone, FiMapPin } from 'react-icons/fi';
+import { FiMail, FiPhone, FiMapPin, FiCheck, FiX } from 'react-icons/fi';
 import './Footer.css';
 
 const Footer = () => {
@@ -8,7 +8,7 @@ const Footer = () => {
 
   const handleNewsletterSubmit = (e) => {
     e.preventDefault();
-    if (email && email.includes('@')) {
+    if (email?.includes('@')) {
       setSubscriptionStatus('success');
       setEmail('');
       setTimeout(() => setSubscriptionStatus(''), 3000);
@@ -91,10 +91,10 @@ const Footer = () => {
                 Subscribe
               </button>
               {subscriptionStatus === 'success' && (
-                <p className="success-message">✓ Subscribed successfully!</p>
+                <p className="success-message"><FiCheck size={18} /> Subscribed successfully!</p>
               )}
               {subscriptionStatus === 'error' && (
-                <p className="error-message">✗ Please enter a valid email</p>
+                <p className="error-message"><FiX size={18} /> Please enter a valid email</p>
               )}
             </form>
           </div>
