@@ -5,21 +5,21 @@
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #c41e3a 0%, #a01830 100%);
+  background: linear-gradient(135deg, #1e4ac4 0%, #1830a0 100%);
   color: white;
   border: none;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 8px 24px rgba(196, 30, 58, 0.35);
+  box-shadow: 0 8px 24px rgba(30, 74, 196, 0.35);
   transition: all 0.3s ease;
   z-index: 999;
 }
 
 .contact-widget-button:hover {
   transform: scale(1.1);
-  box-shadow: 0 12px 32px rgba(196, 30, 58, 0.45);
+  box-shadow: 0 12px 32px rgba(30, 74, 196, 0.45);
 }
 
 .contact-widget-button:active {
@@ -73,7 +73,7 @@
 }
 
 .widget-header {
-  background: linear-gradient(135deg, #c41e3a 0%, #a01830 100%);
+  background: linear-gradient(135deg, #1e4ac4 0%, #1830a0 100%);
   color: white;
   padding: 18px;
   border-radius: 12px 12px 0 0;
@@ -170,7 +170,7 @@
 }
 
 .user-message {
-  background: #c41e3a;
+  background: #1e4ac4;
   color: white;
   align-self: flex-end;
   max-width: 85%;
@@ -209,14 +209,14 @@
 
 .widget-input:focus {
   outline: none;
-  border-color: #c41e3a;
-  box-shadow: 0 0 0 3px rgba(196, 30, 58, 0.1);
+  border-color: #1e4ac4;
+  box-shadow: 0 0 0 3px rgba(30, 74, 196, 0.1);
 }
 
 .send-button {
   width: 40px;
   height: 40px;
-  background: linear-gradient(135deg, #c41e3a 0%, #a01830 100%);
+  background: linear-gradient(135deg, #1e4ac4 0%, #1830a0 100%);
   border: none;
   border-radius: 6px;
   color: white;
@@ -254,7 +254,7 @@
 
 .action-btn:hover {
   background: #f9fafb;
-  border-color: #c41e3a;
+  border-color: #1e4ac4;
 }
 
 /* Mobile Responsive */

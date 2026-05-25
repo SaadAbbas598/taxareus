@@ -1,7 +1,7 @@
 /* Professional Hero Section */
 .hero {
   position: relative;
-  background: linear-gradient(135deg, #c41e3a 0%, #a01830 100%);
+  background: linear-gradient(135deg, #1e4ac4 0%, #1830a0 100%);
   padding: 80px 0 100px;
   min-height: 100vh;
   display: flex;
@@ -18,7 +18,7 @@
   bottom: 0;
   z-index: 0;
   overflow: hidden;
-  background: linear-gradient(135deg, #c41e3a 0%, #a01830 50%, #8d1426 100%);
+  background: linear-gradient(135deg, #1e4ac4 0%, #1830a0 50%, #14268d 100%);
 }
 
 .gradient-circle {
@@ -280,16 +280,16 @@
 }
 
 .btn-icon {
-  color: #c41e3a;
-  stroke: #c41e3a;
+  color: #1e4ac4;
+  stroke: #1e4ac4;
   stroke-width: 1.5;
 }
 
 /* Floating Icons */
 .floating-icon {
   position: absolute;
-  color: #c41e3a;
-  stroke: #c41e3a;
+  color: #1e4ac4;
+  stroke: #1e4ac4;
   stroke-width: 1.5;
   animation: float 4s ease-in-out infinite;
   z-index: 1;

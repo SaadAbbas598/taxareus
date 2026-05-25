@@ -17,14 +17,14 @@
   height: var(--size);
   border-radius: 50%;
   background: #ffffff;
-  border: 2px solid #E53935;
-  color: #E53935;
+  border: 2px solid #3544E5;
+  color: #3544E5;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   font-size: 28px;
   font-weight: 700;
-  box-shadow: 0 6px 18px rgba(229,57,53,0.12);
+  box-shadow: 0 6px 18px rgba(53,68,229,0.12);
   cursor: pointer;
   margin: 0 auto;
   transition: transform 220ms ease, opacity 220ms ease, box-shadow 220ms ease;
@@ -58,7 +58,7 @@
 .panel-card {
   background: linear-gradient(180deg, #ffffff 0%, #fffdfd 100%);
   border-radius: 22px;
-  border: 1px solid rgba(229, 57, 53, 0.08);
+  border: 1px solid rgba(53, 68, 229, 0.08);
   box-shadow: 0 24px 70px rgba(12, 18, 32, 0.10);
   width: 100%;
   padding: 26px;
@@ -75,7 +75,7 @@
   background: transparent;
   border: none;
   font-size: 30px;
-  color: #991B1B;
+  color: #1B1B99;
   cursor: pointer;
   padding: 4px 8px;
   line-height: 1;
@@ -87,8 +87,8 @@
   gap: 8px;
   padding: 7px 12px;
   border-radius: 999px;
-  background: rgba(229, 57, 53, 0.08);
-  color: #E53935;
+  background: rgba(53, 68, 229, 0.08);
+  color: #3544E5;
   font-size: 0.74rem;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -141,13 +141,13 @@
 .field input[type="number"]:focus,
 .field select:focus {
   outline: none;
-  border-color: rgba(229, 57, 53, 0.45);
-  box-shadow: 0 0 0 4px rgba(229, 57, 53, 0.08);
+  border-color: rgba(53, 68, 229, 0.45);
+  box-shadow: 0 0 0 4px rgba(53, 68, 229, 0.08);
 }
 
 .field input[type="range"] {
   width: 100%;
-  accent-color: #E53935;
+  accent-color: #3544E5;
 }
 
 .minimal-row {
@@ -167,7 +167,7 @@
 
 .range-value {
   margin-top: 4px;
-  color: #991B1B;
+  color: #1B1B99;
   font-weight: 700;
   font-size: 0.95rem;
 }
@@ -187,9 +187,9 @@
 .card-label { color: #667085; font-size: 0.82rem; font-weight: 600; }
 .card-value { font-weight: 700; font-size: 1rem; margin-top: 6px; color: #111827; }
 
-.card.highlight { background: #fff5f5; border: 1px solid rgba(229,57,53,0.12); }
-.card.highlight .card-label { color: #B91C1C; }
-.card.highlight .card-value { color: #991B1B; }
+.card.highlight { background: #f5f5ff; border: 1px solid rgba(53,68,229,0.12); }
+.card.highlight .card-label { color: #1C1CB9; }
+.card.highlight .card-value { color: #1B1B99; }
 
 .result-strip {
   display: flex;
@@ -198,13 +198,13 @@
   gap: 12px;
   padding: 14px 16px;
   border-radius: 16px;
-  background: linear-gradient(135deg, rgba(229,57,53,0.06), rgba(255,255,255,1));
-  border: 1px solid rgba(229,57,53,0.10);
+  background: linear-gradient(135deg, rgba(53,68,229,0.06), rgba(255,255,255,1));
+  border: 1px solid rgba(53,68,229,0.10);
   flex-wrap: wrap;
 }
 
 .result-strip-label {
-  color: #E53935;
+  color: #3544E5;
   font-size: 0.82rem;
   font-weight: 700;
   letter-spacing: 0.08em;

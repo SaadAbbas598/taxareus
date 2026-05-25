@@ -1,0 +1,113 @@
+.main-card {
+  background: linear-gradient(135deg, #3B3B7D 0%, #1e4ac4 50%, #0066FF 100%);
+  margin: 24px;
+  border-radius: 24px;
+  padding: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  box-shadow: 0 8px 24px rgba(30, 74, 196, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.main-card::before {
+  content: '';
+  position: absolute;
+  top: -100px;
+  right: -100px;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.card-content {
+  z-index: 1;
+  flex: 1;
+}
+
+.card-name {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 0 0 8px 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.card-label {
+  font-size: 0.9rem;
+  margin: 0 0 12px 0;
+  opacity: 0.9;
+  font-weight: 600;
+}
+
+.card-number {
+  font-size: 1rem;
+  margin: 0 0 24px 0;
+  opacity: 0.85;
+  font-family: 'Courier New', monospace;
+  letter-spacing: 2px;
+}
+
+.card-welcome {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.card-illustration {
+  width: 140px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.illustration {
+  width: 100%;
+  height: 100%;
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.1));
+}
+
+@media (max-width: 768px) {
+  .main-card {
+    margin: 16px;
+    padding: 24px;
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .card-name {
+    font-size: 1.5rem;
+  }
+
+  .card-welcome {
+    font-size: 1.1rem;
+  }
+
+  .card-illustration {
+    width: 120px;
+    height: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-card {
+    margin: 12px;
+    padding: 20px;
+    border-radius: 16px;
+  }
+
+  .card-name {
+    font-size: 1.3rem;
+  }
+
+  .card-illustration {
+    width: 100px;
+    height: 80px;
+  }
+}

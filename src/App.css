@@ -1,9 +1,9 @@
 /* Professional Color System */
 :root {
-  --primary: #c41e3a;
-  --primary-dark: #9d172f;
-  --primary-light: #fff5f7;
-  --primary-lighter: #ffe8ed;
+  --primary: #1e4ac4;
+  --primary-dark: #172f9d;
+  --primary-light: #f5f7ff;
+  --primary-lighter: #e8edff;
   --secondary: #0066ff;
   --accent: #f59e0b;
   --success: #10b981;
@@ -17,7 +17,7 @@
   --bg-white: #ffffff;
   --bg-light: #f9fafb;
   --bg-lighter: #f5f7fa;
-  --bg-section-1: #fff5f7;
+  --bg-section-1: #f5f7ff;
   --bg-section-2: #ffffff;
   --bg-section-3: #f9fafb;
   
@@ -108,11 +108,11 @@ main {
 
 /* Buttons - Professional Styling */
 .btn {
-  padding: 14px 32px;
+  padding: 8px 20px;
   border: none;
   border-radius: var(--radius-pill);
   font-weight: 700;
-  font-size: 1rem;
+  font-size: 0.95rem;
   transition: var(--transition);
   cursor: pointer;
   display: inline-flex;
@@ -124,6 +124,8 @@ main {
   box-shadow: var(--shadow-md);
   text-transform: none;
   letter-spacing: 0.3px;
+  line-height: 1.4;
+  height: auto;
 }
 
 .btn:active {
@@ -131,14 +133,14 @@ main {
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, var(--primary) 0%, #b01830 100%);
+  background: linear-gradient(135deg, var(--primary) 0%, #1830b0 100%);
   color: white;
-  box-shadow: 0 4px 20px rgba(196, 30, 58, 0.3);
+  box-shadow: 0 4px 20px rgba(30, 74, 196, 0.3);
 }
 
 .btn-primary:hover {
-  background: linear-gradient(135deg, var(--primary-dark) 0%, #8d1426 100%);
-  box-shadow: 0 8px 35px rgba(196, 30, 58, 0.4);
+  background: linear-gradient(135deg, var(--primary-dark) 0%, #14268d 100%);
+  box-shadow: 0 8px 35px rgba(30, 74, 196, 0.4);
   transform: translateY(-3px);
 }
 
@@ -178,8 +180,9 @@ main {
 }
 
 .btn-sm {
-  padding: 10px 20px;
-  font-size: 0.9rem;
+  padding: 8px 20px;
+  font-size: 0.95rem;
+  line-height: 1.4;
 }
 
 .btn-lg {
