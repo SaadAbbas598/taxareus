@@ -50,8 +50,8 @@ const Services = () => {
 
   return (
     <section className="services-section" id="services">
-      <div className="container">
-        {/* Section Heading */}
+      {/* Changed from "container" to "services-inner" to avoid global CSS conflicts */}
+      <div className="services-inner">
         <div className="services-heading-wrapper">
           <p className="services-tag">What We Offer</p>
           <h2 className="services-main-heading">Comprehensive Tax Services</h2>
@@ -65,23 +65,16 @@ const Services = () => {
             const IconComponent = service.icon;
             return (
               <div key={service.id} className="service-card">
-
-                {/* Row: icon + title side by side */}
                 <div className="service-card-header">
                   <div className="service-card-icon">
-                    <IconComponent size={24} strokeWidth={2} />
+                    <IconComponent size={22} strokeWidth={2} />
                   </div>
                   <h3 className="service-card-title">{service.title}</h3>
                 </div>
-
-                {/* Description below the header row */}
                 <p className="service-card-description">{service.description}</p>
-
-                {/* CTA */}
                 <a href="#contact" className="service-card-link">
                   Learn More <span className="arrow">→</span>
                 </a>
-
               </div>
             );
           })}
