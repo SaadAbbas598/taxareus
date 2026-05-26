@@ -1,7 +1,7 @@
 .pricing-section {
   position: relative;
   background: linear-gradient(135deg, #f5f7ff 0%, #e8edff 100%);
-  padding: 100px 0;
+  padding: 80px 20px;
   overflow: hidden;
 }
 
@@ -69,14 +69,14 @@
 }
 
 .currency {
-  font-size: 1.6rem;
+  font-size: clamp(1.2rem, 2vw, 1.6rem);
   color: #1e4ac4;
   font-weight: 700;
 }
 
 .amount {
   font-family: 'Poppins', sans-serif;
-  font-size: 3.8rem;
+  font-size: clamp(2.5rem, 8vw, 3.8rem);
   font-weight: 800;
   background: linear-gradient(135deg, #1e4ac4 0%, #1830a0 100%);
   -webkit-background-clip: text;
@@ -85,7 +85,7 @@
 }
 
 .period {
-  font-size: 1.05rem;
+  font-size: clamp(0.85rem, 1.5vw, 1.05rem);
   color: #6b7280;
   font-weight: 600;
 }
@@ -96,6 +96,199 @@
   display: flex;
   flex-direction: column;
   gap: 14px;
+}
+
+.feature-check-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.check-icon {
+  color: #1e4ac4;
+  stroke: #1e4ac4;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.feature-text {
+  color: #1a1a1a;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  font-weight: 500;
+}
+
+.btn-primary {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.pricing-note {
+  font-size: 0.85rem;
+  color: #6b7280;
+  font-style: italic;
+}
+
+/* Benefits Grid */
+.pricing-benefits {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  position: relative;
+  z-index: 1;
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+.benefit-item {
+  background: white;
+  border-radius: 12px;
+  padding: 24px 16px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: all 300ms ease;
+}
+
+.benefit-item:hover {
+  box-shadow: 0 8px 20px rgba(30, 74, 196, 0.12);
+  transform: translateY(-4px);
+}
+
+.benefit-icon {
+  width: 24px;
+  height: 24px;
+  color: #1e4ac4;
+  stroke: #1e4ac4;
+  display: block;
+  margin: 0 auto 12px;
+  transition: transform 300ms ease;
+}
+
+.benefit-item:hover .benefit-icon {
+  transform: translateY(-2px) scale(1.06);
+}
+
+.benefit-item p {
+  font-weight: 600;
+  color: #1a1a1a;
+  font-size: 0.95rem;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .pricing-section {
+    padding: 60px 20px;
+  }
+
+  .pricing-benefits {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .pricing-card {
+    padding: 40px 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .pricing-section {
+    padding: 50px 16px;
+  }
+
+  .pricing-card {
+    padding: 32px 24px;
+    margin-bottom: 50px;
+  }
+
+  .features-checklist {
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+
+  .feature-check-item {
+    gap: 10px;
+  }
+
+  .feature-text {
+    font-size: 0.9rem;
+  }
+
+  .pricing-benefits {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .benefit-item {
+    padding: 20px 12px;
+  }
+
+  .benefit-item p {
+    font-size: 0.85rem;
+  }
+
+  .period {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .pricing-section {
+    padding: 40px 12px;
+  }
+
+  .pricing-card {
+    padding: 28px 16px;
+    margin-bottom: 40px;
+  }
+
+  .amount {
+    font-size: 2.2rem;
+  }
+
+  .currency {
+    font-size: 1rem;
+  }
+
+  .period {
+    font-size: 0.8rem;
+  }
+
+  .features-checklist {
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  .feature-check-item {
+    gap: 8px;
+  }
+
+  .feature-text {
+    font-size: 0.8rem;
+  }
+
+  .check-icon {
+    width: 16px;
+    height: 16px;
+    min-width: 16px;
+  }
+
+  .pricing-benefits {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .benefit-item {
+    padding: 16px 12px;
+  }
+
+  .benefit-item p {
+    font-size: 0.8rem;
+  }
+
+  .benefit-icon {
+    width: 20px;
+    height: 20px;
+  }
 }
 
 .feature-check-item {

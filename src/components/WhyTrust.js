@@ -1,5 +1,5 @@
 import React from 'react';
-import { BadgeCheck, BriefcaseBusiness, Headset, LockKeyhole, Zap } from 'lucide-react';
+import { BadgeCheck, Headset, LockKeyhole, Zap } from 'lucide-react';
 import './WhyTrust.css';
 
 const iconProps = {
@@ -61,10 +61,7 @@ const WhyTrust = () => {
           {/* Right Image */}
           <div className="trust-image">
             <div className="image-placeholder">
-              <div className="image-content">
-                <BriefcaseBusiness className="businessman-icon" size={24} {...iconProps} />
-                <p>Professional Businessman</p>
-              </div>
+              <img src="/assets/trust.jpg" alt="Professional Trust" className="trust-image-img" />
             </div>
           </div>
         </div>

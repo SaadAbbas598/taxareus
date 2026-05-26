@@ -13,7 +13,6 @@ import FAQ from './components/FAQ';
 import MobileApp from './components/MobileApp';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
-import ContactWidget from './components/ContactWidget';
 import PrivacyPolicy from './components/PrivacyPolicy';
 
 function App() {
@@ -50,7 +49,6 @@ function App() {
         </Routes>
         <Footer />
         <ScrollToTop />
-        <ContactWidget />
       </div>
     </Router>
   );

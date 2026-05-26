@@ -10,47 +10,48 @@ const HeroSection = () => {
 
   return (
     <section className="hero">
-      <div className="hero-background">
-        <div className="gradient-circle circle-1"></div>
-        <div className="gradient-circle circle-2"></div>
-        <div className="gradient-circle circle-3"></div>
-      </div>
-
-      <div className="container hero-container">
+      <div className="hero-container">
         {/* Left Content */}
         <div className="hero-content">
-          <div className="hero-badge">TRUSTED BY 15K+ CLIENTS</div>
-          
           <h1 className="hero-title">
-            File Your Taxes in <span className="italic-text">Just 6 Minutes</span>
+            File Your Taxes In Just 6 Minutes With Our Qualified Consultants!
           </h1>
 
+          <p className="hero-price">Now available in just Rs. 3,500/-</p>
+
           <p className="hero-description">
-            File using Taxareus services today for only <strong>Rs. 3,500</strong>. Expert handling, maximum refunds, and guaranteed zero stress.
+            We go beyond tax filing! We also help with all your business
+            registration, sales tax filing, trademark registration, and LLC
+            registration in the USA — all in one place.
           </p>
 
           <div className="hero-buttons">
-            <button className="btn btn-white btn-lg" onClick={handleGetStarted}>
-              Get Started
-            </button>
-            <button className="btn btn-outline btn-lg">
-              View Demo <ArrowRight size={20} strokeWidth={2} />
+            <button className="btn-file-now" onClick={handleGetStarted}>
+              File Now <ArrowRight size={20} strokeWidth={2.5} />
             </button>
           </div>
 
-          <div className="hero-trust">
-            <div className="trust-item">
-              <div className="trust-dot"></div>
-              <span>Trusted by Clients</span>
+          <div className="hero-stats">
+            <div className="stat-item">
+              <span className="stat-number">50K+</span>
+              <span className="stat-label">Taxes Filed</span>
+            </div>
+            <div className="stat-item">
+              <span className="stat-number">4.9</span>
+              <span className="stat-label">User Rating</span>
+            </div>
+            <div className="stat-item">
+              <span className="stat-number">6 Min</span>
+              <span className="stat-label">Avg. Filing Time</span>
             </div>
           </div>
         </div>
 
-        {/* Right Hero Image */}
+        {/* Right: single hero image */}
         <div className="hero-mockup">
-          <img 
-            src="/assets/hero-image.jpg" 
-            alt="Taxareus App - File Your Taxes in Just 6 Minutes"
+          <img
+            src="/assets/hero.png"
+            alt="Taxareus Hero"
             className="hero-image"
           />
         </div>

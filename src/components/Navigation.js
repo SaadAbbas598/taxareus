@@ -20,7 +20,7 @@ const Navigation = ({ isScrolled }) => {
       <div className="container navbar-container">
         {/* Logo */}
         <div className="navbar-logo" onClick={scrollToTop}>
-          <div className="logo-icon">T</div>
+          <img src="/assets/logo.png" alt="Taxareus Logo" className="logo-icon" />
           <span>Taxareus</span>
         </div>
 

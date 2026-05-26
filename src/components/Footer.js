@@ -32,7 +32,7 @@ const Footer = () => {
           {/* Company Info */}
           <div className="footer-column">
             <div className="footer-logo">
-              <div className="footer-logo-icon">T</div>
+              <img src="/assets/logo.png" alt="Taxareus Logo" className="footer-logo-icon" />
               <span>Taxareus</span>
             </div>
             <p className="footer-description">
@@ -112,10 +112,6 @@ const Footer = () => {
           </div>
           <div className="footer-bottom-links">
             <Link to="/privacy">Privacy Policy</Link>
-            <span className="divider">•</span>
-            <a href="/terms">Terms of Service</a>
-            <span className="divider">•</span>
-            <a href="/cookies">Cookie Policy</a>
           </div>
         </div>
       </div>

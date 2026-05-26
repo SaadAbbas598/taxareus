@@ -1,5 +1,5 @@
-import React, { useRef } from 'react';
-import { BadgeCheck, ChevronLeft, ChevronRight, FileCheck2, UploadCloud, UserPlus } from 'lucide-react';
+import React from 'react';
+import { BadgeCheck, FileCheck2, UploadCloud, UserPlus } from 'lucide-react';
 import './HowItWorks.css';
 
 const iconProps = {
@@ -7,8 +7,6 @@ const iconProps = {
 };
 
 const HowItWorks = () => {
-  const scrollContainer = useRef(null);
-
   const steps = [
     {
       number: '01',
@@ -40,16 +38,6 @@ const HowItWorks = () => {
     }
   ];
 
-  const scroll = (direction) => {
-    const container = scrollContainer.current;
-    const scrollAmount = 320;
-    if (direction === 'left') {
-      container.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
-    } else {
-      container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-    }
-  };
-
   return (
     <section className="how-it-works" id="how-it-works">
       <div className="container">
@@ -58,31 +46,21 @@ const HowItWorks = () => {
           <p className="section-subheading">Simple 4-step process to file your taxes worry-free</p>
         </div>
 
-        <div className="carousel-wrapper">
-          <button className="carousel-arrow carousel-arrow-left" onClick={() => scroll('left')}>
-            <ChevronLeft size={24} {...iconProps} />
-          </button>
-
-          <div className="steps-container" ref={scrollContainer}>
-            {steps.map((step) => {
-              const IconComponent = step.icon;
-              return (
-                <div key={`step-${step.number}`} className="step-card">
-                  <div className="step-icon-wrapper">
-                    <IconComponent size={24} className="step-icon" {...iconProps} />
-                  </div>
-                  <div className="step-number">{step.number}</div>
-                  <h3 className="step-title">{step.title}</h3>
-                  <p className="step-description">{step.description}</p>
-                  <button className="step-button">{step.buttonText}</button>
+        <div className="steps-grid">
+          {steps.map((step) => {
+            const IconComponent = step.icon;
+            return (
+              <div key={`step-${step.number}`} className="step-card">
+                <div className="step-icon-wrapper">
+                  <IconComponent size={24} className="step-icon" {...iconProps} />
                 </div>
-              );
-            })}
-          </div>
-
-          <button className="carousel-arrow carousel-arrow-right" onClick={() => scroll('right')}>
-            <ChevronRight size={24} {...iconProps} />
-          </button>
+                <div className="step-number">{step.number}</div>
+                <h3 className="step-title">{step.title}</h3>
+                <p className="step-description">{step.description}</p>
+                <button className="step-button">{step.buttonText}</button>
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>
