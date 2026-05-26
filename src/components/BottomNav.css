@@ -29,8 +29,17 @@
   font-weight: 600;
 }
 
+.nav-item svg {
+  transition: transform 220ms ease, stroke 220ms ease;
+}
+
 .nav-item:hover {
   color: #5B5FEF;
+  transform: translateY(-2px);
+}
+
+.nav-item:hover svg {
+  transform: translateY(-1px);
 }
 
 .nav-item.active {
@@ -38,6 +47,7 @@
   background: linear-gradient(135deg, #3B3B7D 0%, #5B5FEF 100%);
   border-radius: 12px;
   padding: 8px 16px;
+  box-shadow: 0 10px 24px rgba(91, 95, 239, 0.28);
 }
 
 .nav-item span {

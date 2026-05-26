@@ -112,6 +112,12 @@
   flex-shrink: 0;
   color: var(--primary-light);
   margin-top: 2px;
+  transition: transform var(--transition-smooth), color var(--transition-smooth);
+}
+
+.contact-item:hover svg {
+  color: white;
+  transform: translateY(-1px);
 }
 
 .contact-item a {

@@ -107,7 +107,6 @@
 .check-icon {
   color: var(--primary-color);
   stroke: var(--primary-color);
-  stroke-width: 2;
   flex-shrink: 0;
   margin-top: 2px;
 }
@@ -154,11 +153,17 @@
 }
 
 .benefit-icon {
+  width: 24px;
+  height: 24px;
   color: var(--primary-color);
   stroke: var(--primary-color);
-  stroke-width: 1.5;
   display: block;
-  margin-bottom: 12px;
+  margin: 0 auto 12px;
+  transition: transform var(--transition-smooth);
+}
+
+.benefit-item:hover .benefit-icon {
+  transform: translateY(-2px) scale(1.06);
 }
 
 .benefit-item p {

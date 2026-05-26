@@ -458,7 +458,6 @@
 .play-store-icon {
   color: white;
   stroke: white;
-  stroke-width: 1.5;
   margin-right: 4px;
 }
 
@@ -488,9 +487,15 @@
 }
 
 .feature-icon {
+  width: 24px;
+  height: 24px;
   color: #1e4ac4;
   stroke: #1e4ac4;
-  stroke-width: 1.5;
+  transition: transform var(--transition-smooth);
+}
+
+.app-feature:hover .feature-icon {
+  transform: translateY(-2px) scale(1.06);
 }
 
 .app-feature p {
@@ -607,10 +612,6 @@
 
   .app-feature {
     padding: 16px;
-  }
-
-  .feature-icon {
-    font-size: 1.5rem;
   }
 
   .app-feature p {

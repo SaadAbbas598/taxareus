@@ -45,37 +45,37 @@ export const PRICING = {
 export const SERVICES = [
   {
     id: 1,
-    icon: '👤',
+    icon: 'user-round',
     title: 'Personal Tax Filing',
     description: 'File your personal income tax return with ease. Our experts handle all the documentation.',
   },
   {
     id: 2,
-    icon: '📋',
+    icon: 'clipboard-check',
     title: 'Tax Registrations',
     description: 'Get your NTN and CNIC registrations completed quickly with proper FBR compliance.',
   },
   {
     id: 3,
-    icon: '💼',
+    icon: 'briefcase-business',
     title: 'Business Representation',
     description: 'Professional tax representation for your business with complete filing support.',
   },
   {
     id: 4,
-    icon: '📄',
+    icon: 'file-badge-2',
     title: 'NTN Registration',
     description: 'Complete NTN registration services for individuals and businesses with instant approval.',
   },
   {
     id: 5,
-    icon: '💰',
+    icon: 'circle-dollar-sign',
     title: 'Tax Refunds',
     description: 'Maximize your tax refunds with our expert analysis and strategic filing approach.',
   },
   {
     id: 6,
-    icon: '🛡️',
+    icon: 'shield-check',
     title: 'Audit Support',
     description: 'Complete audit support and representation with FBR and tax authorities.',
   },
@@ -84,22 +84,22 @@ export const SERVICES = [
 // Trust Features
 export const TRUST_FEATURES = [
   {
-    icon: '⚡',
+    icon: 'zap',
     title: 'Unmatched Speed',
     description: 'Get your returns filed in just 6 minutes',
   },
   {
-    icon: '✓',
+    icon: 'badge-check',
     title: '100% Accuracy',
     description: 'Our experts ensure error-free filing',
   },
   {
-    icon: '💬',
+    icon: 'message-circle',
     title: 'Expert Support',
     description: 'Chat with tax advisors anytime',
   },
   {
-    icon: '🔐',
+    icon: 'lock-keyhole',
     title: 'Data Security',
     description: 'Bank-level encryption for your data',
   },
@@ -140,8 +140,8 @@ export const SOCIAL_LINKS = [
 
 // Newsletter Messages
 export const NEWSLETTER_MESSAGES = {
-  SUCCESS: '✓ Subscribed successfully!',
-  ERROR: '✗ Please enter a valid email',
+  SUCCESS: 'Subscribed successfully!',
+  ERROR: 'Please enter a valid email',
 };
 
 // Animations Duration

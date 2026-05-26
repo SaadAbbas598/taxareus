@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { FiArrowUp } from 'react-icons/fi';
+import { ArrowUp } from 'lucide-react';
 import './ScrollToTop.css';
 
 const ScrollToTop = () => {
@@ -33,7 +33,7 @@ const ScrollToTop = () => {
           onClick={scrollToTop}
           aria-label="Scroll to top"
         >
-          <FiArrowUp size={20} />
+          <ArrowUp size={20} strokeWidth={2} />
         </button>
       )}
     </>

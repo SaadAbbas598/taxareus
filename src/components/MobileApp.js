@@ -1,6 +1,10 @@
 import React from 'react';
 import './MobileApp.css';
-import { FiBell, FiFolder, FiMessageSquare, FiBarChart2, FiPlay, FiDownload } from 'react-icons/fi';
+import { Bell, Download, FolderUp, MessageCircle, Play, SlidersHorizontal } from 'lucide-react';
+
+const iconProps = {
+  strokeWidth: 2,
+};
 
 const MobileApp = () => {
   return (
@@ -31,29 +35,29 @@ const MobileApp = () => {
             {/* Download Buttons */}
             <div className="download-buttons">
               <button className="btn btn-primary">
-                <FiDownload className="app-store-icon" size={20} /> App Store
+                <Download className="app-store-icon" size={20} {...iconProps} /> App Store
               </button>
               <button className="btn btn-secondary">
-                <FiPlay className="play-store-icon" size={20} /> Play Store
+                <Play className="play-store-icon" size={20} {...iconProps} /> Play Store
               </button>
             </div>
 
             {/* Features */}
             <div className="app-features">
               <div className="app-feature">
-                <FiBarChart2 className="feature-icon" size={28} />
+                <SlidersHorizontal className="feature-icon" size={24} {...iconProps} />
                 <p>Real-time Dashboard</p>
               </div>
               <div className="app-feature">
-                <FiFolder className="feature-icon" size={28} />
+                <FolderUp className="feature-icon" size={24} {...iconProps} />
                 <p>Document Upload</p>
               </div>
               <div className="app-feature">
-                <FiMessageSquare className="feature-icon" size={28} />
+                <MessageCircle className="feature-icon" size={24} {...iconProps} />
                 <p>Expert Chat Support</p>
               </div>
               <div className="app-feature">
-                <FiBell className="feature-icon" size={28} />
+                <Bell className="feature-icon" size={24} {...iconProps} />
                 <p>Instant Notifications</p>
               </div>
             </div>

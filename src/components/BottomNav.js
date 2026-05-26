@@ -1,6 +1,11 @@
 import React from 'react';
+import { Home, Mail, Search, Settings } from 'lucide-react';
 import './BottomNav.css';
-import { FiHome, FiSearch, FiMail, FiSettings } from 'react-icons/fi';
+
+const iconProps = {
+  size: 24,
+  strokeWidth: 2,
+};
 
 const BottomNav = ({ activeNav, setActiveNav }) => {
   return (
@@ -9,26 +14,26 @@ const BottomNav = ({ activeNav, setActiveNav }) => {
         className={`nav-item ${activeNav === 'home' ? 'active' : ''}`}
         onClick={() => setActiveNav('home')}
       >
-        <FiHome size={24} />
+        <Home {...iconProps} />
         <span>Home</span>
       </button>
       <button 
         className={`nav-item ${activeNav === 'search' ? 'active' : ''}`}
         onClick={() => setActiveNav('search')}
       >
-        <FiSearch size={24} />
+        <Search {...iconProps} />
       </button>
       <button 
         className={`nav-item ${activeNav === 'mail' ? 'active' : ''}`}
         onClick={() => setActiveNav('mail')}
       >
-        <FiMail size={24} />
+        <Mail {...iconProps} />
       </button>
       <button 
         className={`nav-item ${activeNav === 'settings' ? 'active' : ''}`}
         onClick={() => setActiveNav('settings')}
       >
-        <FiSettings size={24} />
+        <Settings {...iconProps} />
       </button>
     </div>
   );

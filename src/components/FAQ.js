@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FiChevronDown } from 'react-icons/fi';
+import { ChevronDown } from 'lucide-react';
 import './FAQ.css';
 
 const FAQ = () => {
@@ -56,8 +56,9 @@ const FAQ = () => {
                 aria-expanded={activeIndex === index}
               >
                 <span>{faq.question}</span>
-                <FiChevronDown
+                <ChevronDown
                   size={24}
+                  strokeWidth={2}
                   className={`chevron ${activeIndex === index ? 'rotate' : ''}`}
                 />
               </button>

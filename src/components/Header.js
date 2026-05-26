@@ -1,6 +1,6 @@
 import React from 'react';
+import { Bell } from 'lucide-react';
 import './Header.css';
-import { FiBell } from 'react-icons/fi';
 
 const Header = () => {
   return (
@@ -12,7 +12,7 @@ const Header = () => {
         </div>
       </div>
       <button className="header-notification">
-        <FiBell size={24} />
+        <Bell size={24} strokeWidth={2} />
         <span className="notification-badge">1</span>
       </button>
     </div>

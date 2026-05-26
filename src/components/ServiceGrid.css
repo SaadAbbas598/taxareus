@@ -39,6 +39,12 @@
   border-radius: 50%;
   background: rgba(91, 127, 239, 0.1);
   font-weight: 600;
+  transition: transform 260ms ease, background 260ms ease;
+}
+
+.service-card:hover .service-icon {
+  background: rgba(91, 127, 239, 0.16);
+  transform: translateY(-2px) scale(1.04);
 }
 
 .service-title {

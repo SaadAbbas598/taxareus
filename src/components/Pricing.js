@@ -1,6 +1,10 @@
 import React from 'react';
-import { FiCheck, FiTrendingUp, FiDollarSign, FiShield } from 'react-icons/fi';
+import { BadgeCheck, ChartNoAxesCombined, CircleDollarSign, ShieldCheck } from 'lucide-react';
 import './Pricing.css';
+
+const iconProps = {
+  strokeWidth: 2,
+};
 
 const Pricing = () => {
   const features = [
@@ -36,7 +40,7 @@ const Pricing = () => {
           <div className="features-checklist">
             {features.map((feature, index) => (
               <div key={`feature-${feature}`} className="feature-check-item">
-                <FiCheck className="check-icon" size={20} />
+                <BadgeCheck className="check-icon" size={20} {...iconProps} />
                 <span className="feature-text">{feature}</span>
               </div>
             ))}
@@ -53,19 +57,19 @@ const Pricing = () => {
 
         <div className="pricing-benefits">
           <div className="benefit-item">
-            <FiTrendingUp className="benefit-icon" size={32} />
+            <ChartNoAxesCombined className="benefit-icon" size={24} {...iconProps} />
             <p>Fast Processing</p>
           </div>
           <div className="benefit-item">
-            <FiCheck className="benefit-icon" size={32} />
+            <BadgeCheck className="benefit-icon" size={24} {...iconProps} />
             <p>Accuracy</p>
           </div>
           <div className="benefit-item">
-            <FiDollarSign className="benefit-icon" size={32} />
+            <CircleDollarSign className="benefit-icon" size={24} {...iconProps} />
             <p>Maximum Refunds</p>
           </div>
           <div className="benefit-item">
-            <FiShield className="benefit-icon" size={32} />
+            <ShieldCheck className="benefit-icon" size={24} {...iconProps} />
             <p>Secure & Confidential</p>
           </div>
         </div>

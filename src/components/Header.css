@@ -43,6 +43,13 @@
   justify-content: center;
   width: 48px;
   height: 48px;
+  border-radius: 14px;
+  transition: background 220ms ease, transform 220ms ease;
+}
+
+.header-notification:hover {
+  background: rgba(255, 255, 255, 0.14);
+  transform: translateY(-1px);
 }
 
 .notification-badge {

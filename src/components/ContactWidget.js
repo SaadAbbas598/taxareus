@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
-import { FiX, FiMessageSquare } from 'react-icons/fi';
+import { MessageCircle, Paperclip, Send, Smile, Sparkles, X } from 'lucide-react';
 import './ContactWidget.css';
+
+const iconProps = {
+  strokeWidth: 2,
+};
 
 const ContactWidget = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -29,7 +33,7 @@ const ContactWidget = () => {
           aria-label="Open chat"
           title="Chat with us"
         >
-          <FiMessageSquare size={24} />
+          <MessageCircle size={24} {...iconProps} />
           {hasMessages && <span className="pulse"></span>}
         </button>
       )}
@@ -53,7 +57,7 @@ const ContactWidget = () => {
               onClick={() => setIsOpen(false)}
               aria-label="Close chat"
             >
-              <FiX size={20} />
+              <X size={20} {...iconProps} />
             </button>
           </div>
 
@@ -61,7 +65,9 @@ const ContactWidget = () => {
           <div className="widget-messages">
             {!hasMessages && (
               <div className="welcome-message">
-                <div className="message-avatar">👋</div>
+                <div className="message-avatar">
+                  <Sparkles size={24} {...iconProps} />
+                </div>
                 <p className="message-text">
                   Hello! How can we help you today? Ask us anything about tax filing, pricing, or our services.
                 </p>
@@ -85,15 +91,15 @@ const ContactWidget = () => {
                 className="widget-input"
               />
               <button type="submit" className="send-button" aria-label="Send message">
-                ➤
+                <Send size={18} {...iconProps} />
               </button>
             </div>
             <div className="quick-actions">
               <button type="button" className="action-btn" title="Attach file">
-                📎
+                <Paperclip size={18} {...iconProps} />
               </button>
               <button type="button" className="action-btn" title="Add emoji">
-                😊
+                <Smile size={18} {...iconProps} />
               </button>
             </div>
           </form>

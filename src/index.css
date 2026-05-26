@@ -46,6 +46,19 @@ button {
   cursor: pointer;
 }
 
+.lucide {
+  display: block;
+  flex-shrink: 0;
+}
+
+.btn .lucide {
+  transition: transform var(--transition-fast);
+}
+
+.btn:hover .lucide {
+  transform: translateX(2px);
+}
+
 input, textarea, select {
   font-family: inherit;
 }

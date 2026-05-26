@@ -1,5 +1,5 @@
 import React from 'react';
-import { FiArrowRight, FiBarChart2, FiClipboard, FiMessageSquare, FiSettings, FiUser, FiDollarSign, FiCheck, FiSmartphone } from 'react-icons/fi';
+import { ArrowRight } from 'lucide-react';
 import './HeroSection.css';
 
 const HeroSection = () => {
@@ -34,7 +34,7 @@ const HeroSection = () => {
               Get Started
             </button>
             <button className="btn btn-outline btn-lg">
-              View Demo <FiArrowRight size={20} />
+              View Demo <ArrowRight size={20} strokeWidth={2} />
             </button>
           </div>
 
@@ -46,48 +46,13 @@ const HeroSection = () => {
           </div>
         </div>
 
-        {/* Right Phone Mockup */}
+        {/* Right Hero Image */}
         <div className="hero-mockup">
-          <div className="phone-frame animate-float">
-            <div className="phone-notch"></div>
-            <div className="phone-content">
-              <div className="phone-header">
-                <div className="phone-status">
-                  <span>9:41</span>
-                </div>
-              </div>
-              
-              <div className="phone-balance">
-                <span className="balance-label">Total Refund</span>
-                <span className="balance-amount">Rs.705,500</span>
-              </div>
-
-              <div className="phone-buttons">
-                <button className="phone-btn">
-                  <FiBarChart2 className="btn-icon" size={24} />
-                  <span>Dashboard</span>
-                </button>
-                <button className="phone-btn">
-                  <FiClipboard className="btn-icon" size={24} />
-                  <span>Filing</span>
-                </button>
-                <button className="phone-btn">
-                  <FiMessageSquare className="btn-icon" size={24} />
-                  <span>Support</span>
-                </button>
-                <button className="phone-btn">
-                  <FiSettings className="btn-icon" size={24} />
-                  <span>Settings</span>
-                </button>
-              </div>
-            </div>
-          </div>
-
-          {/* Floating decorative icons */}
-          <div className="floating-icon icon-1"><FiUser size={40} /></div>
-          <div className="floating-icon icon-2"><FiDollarSign size={40} /></div>
-          <div className="floating-icon icon-3"><FiCheck size={40} /></div>
-          <div className="floating-icon icon-4"><FiSmartphone size={40} /></div>
+          <img 
+            src="/assets/hero-image.jpg" 
+            alt="Taxareus App - File Your Taxes in Just 6 Minutes"
+            className="hero-image"
+          />
         </div>
       </div>
     </section>

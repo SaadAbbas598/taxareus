@@ -1,6 +1,11 @@
 import React, { useState } from 'react';
-import { FiMail, FiPhone, FiMapPin, FiCheck, FiX } from 'react-icons/fi';
+import { Link } from 'react-router-dom';
+import { Check, Mail, MapPin, Phone, X } from 'lucide-react';
 import './Footer.css';
+
+const iconProps = {
+  strokeWidth: 2,
+};
 
 const Footer = () => {
   const [email, setEmail] = useState('');
@@ -56,15 +61,15 @@ const Footer = () => {
           <div className="footer-column">
             <h4 className="footer-heading">Contact Us</h4>
             <div className="contact-item">
-              <FiMail size={20} />
+              <Mail size={20} {...iconProps} />
               <a href="mailto:info@taxareus.com">info@taxareus.com</a>
             </div>
             <div className="contact-item">
-              <FiPhone size={20} />
+              <Phone size={20} {...iconProps} />
               <a href="tel:+923327772354">+92 332-7772354</a>
             </div>
             <div className="contact-item">
-              <FiMapPin size={20} />
+              <MapPin size={20} {...iconProps} />
               <p>Flat 903, Green Two Residency<br />Block 2 PECHS, Karachi</p>
             </div>
             <div className="contact-item">
@@ -91,10 +96,10 @@ const Footer = () => {
                 Subscribe
               </button>
               {subscriptionStatus === 'success' && (
-                <p className="success-message"><FiCheck size={18} /> Subscribed successfully!</p>
+                <p className="success-message"><Check size={18} {...iconProps} /> Subscribed successfully!</p>
               )}
               {subscriptionStatus === 'error' && (
-                <p className="error-message"><FiX size={18} /> Please enter a valid email</p>
+                <p className="error-message"><X size={18} {...iconProps} /> Please enter a valid email</p>
               )}
             </form>
           </div>
@@ -106,7 +111,7 @@ const Footer = () => {
             <p>&copy; {currentYear} Taxareus. All rights reserved.</p>
           </div>
           <div className="footer-bottom-links">
-            <a href="/privacy">Privacy Policy</a>
+            <Link to="/privacy">Privacy Policy</Link>
             <span className="divider">•</span>
             <a href="/terms">Terms of Service</a>
             <span className="divider">•</span>
