@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 import './Navigation.css';
 
 const Navigation = ({ isScrolled }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  const navigate = useNavigate();
 
   const handleNavClick = (sectionId) => {
     setMobileMenuOpen(false);
@@ -11,15 +14,20 @@ const Navigation = ({ isScrolled }) => {
     element?.scrollIntoView({ behavior: 'smooth' });
   };
 
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+  const handleLogoClick = () => {
+    setMobileMenuOpen(false);
+    if (window.location.pathname !== '/') {
+      navigate('/');
+    } else {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
   };
 
   return (
     <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
       <div className="container navbar-container">
         {/* Logo */}
-        <div className="navbar-logo" onClick={scrollToTop}>
+        <div className="navbar-logo" onClick={handleLogoClick}>
           <img src="/assets/logo.png" alt="TAX R US Logo" className="logo-icon" />
           <div className="brand-name" aria-label="TaxRUs">
             <span className="brand-text">TAX</span>
