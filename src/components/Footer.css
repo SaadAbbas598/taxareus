@@ -56,16 +56,16 @@
 }
 
 .brand-tag {
-  background: #000000; /* black background */
-  color: #0ea5ff; /* blue R */
+  background: #0b3b82; /* dark blue background */
+  color: #ffffff; /* white R */
   padding: 6px 8px;
   border-radius: 6px;
   font-weight: 900;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.18);
-  border: 1px solid rgba(255,255,255,0.04);
+  box-shadow: 0 4px 10px rgba(11,59,130,0.18);
+  border: 1px solid rgba(255,255,255,0.06);
 }
 
 .footer-description {

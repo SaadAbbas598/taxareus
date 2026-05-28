@@ -1,36 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './TaxCalculator.css';
 
-/* ── Pakistan FBR Tax Slabs 2025-2026 (monthly income → annual) ── */
-const ZERO_TAX_MONTHLY_THRESHOLD = 65000;
-
-const TAX_SLABS = {
-  '2025-2026': [
-    { min: 0,        max: 50000,   rate: 0,    fixed: 0 },
-    { min: 50000,    max: 100000,  rate: 0.05, fixed: 0 },
-    { min: 100000,   max: 200000,  rate: 0.15, fixed: 2500 },
-    { min: 200000,   max: 400000,  rate: 0.25, fixed: 17500 },
-    { min: 400000,   max: 600000,  rate: 0.30, fixed: 67500 },
-    { min: 600000,   max: Infinity,rate: 0.35, fixed: 127500 },
-  ],
-  '2024-2025': [
-    { min: 0,        max: 50000,   rate: 0,    fixed: 0 },
-    { min: 50000,    max: 100000,  rate: 0.05, fixed: 0 },
-    { min: 100000,   max: 200000,  rate: 0.15, fixed: 2500 },
-    { min: 200000,   max: 400000,  rate: 0.25, fixed: 17500 },
-    { min: 400000,   max: 600000,  rate: 0.30, fixed: 67500 },
-    { min: 600000,   max: Infinity,rate: 0.35, fixed: 127500 },
-  ],
-  '2023-2024': [
-    { min: 0,        max: 50000,   rate: 0,    fixed: 0 },
-    { min: 50000,    max: 100000,  rate: 0.025,fixed: 0 },
-    { min: 100000,   max: 200000,  rate: 0.125,fixed: 1250 },
-    { min: 200000,   max: 300000,  rate: 0.175,fixed: 13750 },
-    { min: 300000,   max: 500000,  rate: 0.225,fixed: 31250 },
-    { min: 500000,   max: Infinity,rate: 0.275,fixed: 76250 },
-  ],
-};
-
 const TIPS = [
   'Always register for NTN before filing; it\'s mandatory.',
   'File your returns on time to avoid penalty surcharges.',
@@ -39,31 +9,27 @@ const TIPS = [
   'Investing in approved pension funds reduces taxable income.',
 ];
 
-function calcTax(monthlyIncome, year) {
-  if (monthlyIncome <= ZERO_TAX_MONTHLY_THRESHOLD) {
+/* ── Simple threshold rule: no tax up to Rs.60,000 monthly; extra taxed at 2.53% ── */
+const ZERO_TAX_MONTHLY_THRESHOLD = 60000;
+const EXTRA_RATE = 0.0253; // 2.53%
+
+function calcTax(monthlyIncome /* number */) {
+  const income = Number(monthlyIncome) || 0;
+  if (income <= ZERO_TAX_MONTHLY_THRESHOLD) {
     return {
       monthlyTax: 0,
-      salaryAfter: monthlyIncome,
+      salaryAfter: income,
       annualTax: 0,
-      annualSalary: monthlyIncome * 12,
+      annualSalary: income * 12,
     };
   }
 
-  const annual = monthlyIncome * 12;
-  const slabs = TAX_SLABS[year] || TAX_SLABS['2025-2026'];
-  let annualTax = 0;
+  const extra = income - ZERO_TAX_MONTHLY_THRESHOLD;
+  const monthlyTax = Math.round(extra * EXTRA_RATE * 100) / 100; // two decimals
+  const salaryAfter = Math.round((income - monthlyTax) * 100) / 100;
+  const annualTax = Math.round(monthlyTax * 12 * 100) / 100;
+  const annualSalary = Math.round(salaryAfter * 12 * 100) / 100;
 
-  for (const slab of slabs) {
-    if (annual > slab.min) {
-      const taxable = Math.min(annual, slab.max) - slab.min;
-      annualTax = slab.fixed + taxable * slab.rate;
-      if (annual <= slab.max) break;
-    }
-  }
-
-  const monthlyTax   = annualTax / 12;
-  const salaryAfter  = monthlyIncome - monthlyTax;
-  const annualSalary = salaryAfter * 12;
   return { monthlyTax, salaryAfter, annualTax, annualSalary };
 }
 

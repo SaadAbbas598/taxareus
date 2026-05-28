@@ -87,7 +87,7 @@
 
 .navbar-logo .brand-tag {
   /* Dark background for the R character in the navbar */
-  background: #0b1220 !important; /* very dark navy */
+  background: #0b3b82 !important; /* dark blue */
   color: #ffffff; /* white R character */
   -webkit-text-fill-color: #ffffff; /* ensure WebKit text fill is white */
   -webkit-background-clip: initial;
@@ -100,7 +100,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 14px rgba(11,18,32,0.22);
+  box-shadow: 0 4px 14px rgba(11,59,130,0.22);
   border: 1px solid rgba(255,255,255,0.06);
 }
 
