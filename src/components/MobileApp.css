@@ -436,10 +436,12 @@
 }
 
 .download-buttons .btn {
-  flex: 1;
-  min-width: 160px;
+  flex: 1 1 0;
+  min-width: 0;
+  width: 100%;
   gap: 8px;
   font-size: 0.95rem;
+  white-space: nowrap;
 }
 
 .app-store-icon,

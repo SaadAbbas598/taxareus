@@ -37,7 +37,7 @@ const MobileApp = () => {
               <button className="btn btn-primary">
                 <Download className="app-store-icon" size={20} {...iconProps} /> App Store
               </button>
-              <button className="btn btn-secondary">
+              <button className="btn btn-primary">
                 <Play className="play-store-icon" size={20} {...iconProps} /> Play Store
               </button>
             </div>
