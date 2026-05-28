@@ -20,8 +20,12 @@ const Navigation = ({ isScrolled }) => {
       <div className="container navbar-container">
         {/* Logo */}
         <div className="navbar-logo" onClick={scrollToTop}>
-          <img src="/assets/logo.png" alt="Taxareus Logo" className="logo-icon" />
-          <span>Taxareus</span>
+          <img src="/assets/logo.png" alt="TAX R US Logo" className="logo-icon" />
+          <div className="brand-name" aria-label="TaxRUs">
+            <span className="brand-text">TAX</span>
+            <span className="brand-tag">R</span>
+            <span className="brand-text">US</span>
+          </div>
         </div>
 
         {/* Desktop Menu */}

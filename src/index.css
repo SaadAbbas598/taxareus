@@ -5,18 +5,18 @@
 }
 
 :root {
-  --primary-color: #4A4AFF;
-  --primary-dark: #3A3ACF;
-  --primary-light: #5B5BFF;
-  --secondary-light: #F5F3FF;
-  --secondary-lighter: #EDE9FE;
-  --text-dark: #1A1A1A;
-  --text-light: #666666;
-  --border-color: #E5E5E5;
-  --background-light: #F9FAFB;
-  --background-white: #FFFFFF;
+  --primary-color: #1e4ac4;
+  --primary-dark: #142f96;
+  --primary-light: #4f73ff;
+  --secondary-light: #eef4ff;
+  --secondary-lighter: #dce8ff;
+  --text-dark: #101828;
+  --text-light: #5b6475;
+  --border-color: #d6def0;
+  --background-light: #f5f8ff;
+  --background-white: #ffffff;
   --success-color: #10B981;
-  --footer-bg: #1A1A4D;
+  --footer-bg: #07111f;
   
   --transition-fast: 0.2s ease;
   --transition-smooth: 0.3s ease;
@@ -38,12 +38,16 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: var(--text-dark);
-  background-color: var(--background-white);
+  background: radial-gradient(circle at top, #12284d 0%, #07111f 55%, #050b15 100%);
 }
 
 button {
   font-family: inherit;
   cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
+  touch-action: manipulation;
+  line-height: 1;
 }
 
 .lucide {

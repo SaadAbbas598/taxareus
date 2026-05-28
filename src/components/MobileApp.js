@@ -25,7 +25,7 @@ const MobileApp = () => {
           {/* Right - Content */}
           <div className="app-content-section">
             <h2 className="app-heading">
-              Download Taxareus App Now
+              Download TAX R US App Now
             </h2>
 
             <p className="app-description">

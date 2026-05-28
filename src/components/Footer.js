@@ -32,8 +32,12 @@ const Footer = () => {
           {/* Company Info */}
           <div className="footer-column">
             <div className="footer-logo">
-              <img src="/assets/logo.png" alt="Taxareus Logo" className="footer-logo-icon" />
-              <span>Taxareus</span>
+              <img src="/assets/logo.png" alt="TAX R US Logo" className="footer-logo-icon" />
+              <div className="brand-name" aria-label="TaxRUs">
+                <span className="brand-text">TAX</span>
+                <span className="brand-tag">R</span>
+                <span className="brand-text">US</span>
+              </div>
             </div>
             <p className="footer-description">
               Professional tax filing services in Pakistan with guaranteed accuracy and maximum refunds.
@@ -108,7 +112,7 @@ const Footer = () => {
         {/* Footer Bottom */}
         <div className="footer-bottom">
           <div className="footer-bottom-left">
-            <p>&copy; {currentYear} Taxareus. All rights reserved.</p>
+            <p>&copy; {currentYear} TAXRUS. All rights reserved.</p>
           </div>
           <div className="footer-bottom-links">
             <Link to="/privacy">Privacy Policy</Link>

@@ -42,7 +42,7 @@ const HowItWorks = () => {
     <section className="how-it-works" id="how-it-works">
       <div className="container">
         <div className="section-header">
-          <h2 className="section-heading">How Taxareus Works</h2>
+          <h2 className="section-heading">How TAX R US Works</h2>
           <p className="section-subheading">Simple 4-step process to file your taxes worry-free</p>
         </div>
 

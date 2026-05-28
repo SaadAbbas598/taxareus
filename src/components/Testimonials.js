@@ -11,7 +11,7 @@ const testimonials = [
   {
     id: 2,
     name: 'Rizwan Muhammad',
-    text: 'I was struggling in tax filing, Taxareus helped me in the process. The team is really professional and competent in their work. Highly recommend.',
+    text: 'I was struggling in tax filing, TAX R US helped me in the process. The team is really professional and competent in their work. Highly recommend.',
     avatar: 'RM',
   },
   {

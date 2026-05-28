@@ -37,7 +37,7 @@ const WhyTrust = () => {
           {/* Left Content */}
           <div className="trust-content">
             <h2 className="trust-heading">
-              Why Leading Professionals Trust Taxareus
+              Why Leading Professionals Trust TAX R US
             </h2>
 
             <div className="features-list">

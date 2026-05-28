@@ -45,10 +45,10 @@ const ContactWidget = () => {
           <div className="widget-header">
             <div className="widget-header-content">
               <div className="widget-logo">
-                <div className="logo-square">T</div>
+                <div className="logo-square">TRU</div>
               </div>
               <div className="widget-title">
-                <h4>Taxareus Support</h4>
+                <h4>TAX R US Support</h4>
                 <p>Typically replies within few minutes</p>
               </div>
             </div>

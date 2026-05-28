@@ -1,11 +1,11 @@
 {
-  "name": "Taxareus",
-  "short_name": "Taxareus",
+  "name": "TAX R US",
+  "short_name": "TAX R US",
   "description": "Professional tax filing website - File your taxes in 6 minutes",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#4A4AFF",
+  "background_color": "#07111f",
+  "theme_color": "#1e4ac4",
   "orientation": "portrait-primary",
   "icons": [
     {

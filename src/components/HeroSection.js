@@ -51,7 +51,7 @@ const HeroSection = () => {
         <div className="hero-mockup">
           <img
             src="/assets/hero.png"
-            alt="Taxareus Hero"
+            alt="TAX R US Hero"
             className="hero-image"
           />
         </div>

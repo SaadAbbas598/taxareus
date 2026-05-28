@@ -11,7 +11,7 @@ const FAQ = () => {
       answer: 'Most tax returns can be filed in just 6 minutes! Our streamlined process makes it quick and painless.'
     },
     {
-      question: 'Is my data safe with Taxareus?',
+      question: 'Is my data safe with TAX R US?',
       answer: 'Yes, we use bank-level encryption (256-bit SSL) and comply with FBR security standards. Your data is always secure.'
     },
     {

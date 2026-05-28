@@ -67,6 +67,43 @@
   object-fit: contain;
 }
 
+/* Brand name to match Footer styling (TAX [green R box] US) */
+.brand-name {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.brand-text {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 800;
+  letter-spacing: 0.6px;
+  background: linear-gradient(135deg, #1e4ac4 0%, #1830a0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.navbar-logo .brand-tag {
+  background: #0b78d1; /* darker blue background for navbar R */
+  color: #ffffff; /* white R character */
+  -webkit-text-fill-color: #ffffff; /* ensure WebKit text fill is white (overrides gradient clip) */
+  background: #0b78d1 !important; /* explicitly keep darker blue background */
+  -webkit-background-clip: initial;
+  background-clip: initial;
+  position: relative;
+  z-index: 2;
+  padding: 6px 8px;
+  border-radius: 6px;
+  font-weight: 900;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 6px rgba(11,120,209,0.18);
+  border: 1px solid rgba(0,0,0,0.08);
+}
+
 .nav-menu {
   display: flex;
   align-items: center;
@@ -168,6 +205,10 @@
   }
 
   .navbar-logo span {
+    display: none;
+  }
+
+  .navbar-logo .brand-name {
     display: none;
   }
 

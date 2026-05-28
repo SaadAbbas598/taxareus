@@ -1,10 +1,10 @@
 /* Professional Color System */
 :root {
   --primary: #1e4ac4;
-  --primary-dark: #172f9d;
-  --primary-light: #f5f7ff;
-  --primary-lighter: #e8edff;
-  --secondary: #0066ff;
+  --primary-dark: #142f96;
+  --primary-light: #eaf1ff;
+  --primary-lighter: #dce8ff;
+  --secondary: #0f172a;
   --accent: #f59e0b;
   --success: #10b981;
   --danger: #ef4444;
@@ -15,11 +15,11 @@
   --text-lighter: #999;
   
   --bg-white: #ffffff;
-  --bg-light: #f9fafb;
-  --bg-lighter: #f5f7fa;
-  --bg-section-1: #f5f7ff;
+  --bg-light: #f5f8ff;
+  --bg-lighter: #eef4ff;
+  --bg-section-1: #f5f8ff;
   --bg-section-2: #ffffff;
-  --bg-section-3: #f9fafb;
+  --bg-section-3: #f7faff;
   
   --border-color: #e5e7eb;
   --border-light: #f0f0f0;
@@ -108,7 +108,7 @@ main {
 
 /* Buttons - Professional Styling */
 .btn {
-  padding: 8px 20px;
+  padding: 11px 20px;
   border: none;
   border-radius: var(--radius-pill);
   font-weight: 700;
@@ -126,6 +126,10 @@ main {
   letter-spacing: 0.3px;
   line-height: 1.4;
   height: auto;
+  min-height: 44px;
+  min-width: 44px;
+  -webkit-appearance: none;
+  appearance: none;
 }
 
 .btn:active {
@@ -180,22 +184,39 @@ main {
 }
 
 .btn-sm {
-  padding: 8px 20px;
+  padding: 10px 18px;
   font-size: 0.95rem;
   line-height: 1.4;
+  min-height: 40px;
 }
 
 .btn-lg {
-  padding: 16px 48px;
+  padding: 16px 42px;
   font-size: 1.1rem;
   width: 100%;
   max-width: 500px;
   font-weight: 700;
   letter-spacing: 0.4px;
+  min-height: 52px;
 }
 
 .btn-lg:hover {
   transform: translateY(-3px);
+}
+
+@media (max-width: 768px) {
+  .btn {
+    width: 100%;
+    max-width: 100%;
+    justify-content: center;
+    min-height: 48px;
+  }
+
+  .btn-sm,
+  .btn-lg {
+    width: 100%;
+    max-width: 100%;
+  }
 }
 
 /* Cards */

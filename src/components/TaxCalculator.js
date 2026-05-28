@@ -2,6 +2,8 @@ import React, { useState, useEffect, useRef } from 'react';
 import './TaxCalculator.css';
 
 /* ── Pakistan FBR Tax Slabs 2025-2026 (monthly income → annual) ── */
+const ZERO_TAX_MONTHLY_THRESHOLD = 65000;
+
 const TAX_SLABS = {
   '2025-2026': [
     { min: 0,        max: 50000,   rate: 0,    fixed: 0 },
@@ -38,6 +40,15 @@ const TIPS = [
 ];
 
 function calcTax(monthlyIncome, year) {
+  if (monthlyIncome <= ZERO_TAX_MONTHLY_THRESHOLD) {
+    return {
+      monthlyTax: 0,
+      salaryAfter: monthlyIncome,
+      annualTax: 0,
+      annualSalary: monthlyIncome * 12,
+    };
+  }
+
   const annual = monthlyIncome * 12;
   const slabs = TAX_SLABS[year] || TAX_SLABS['2025-2026'];
   let annualTax = 0;
