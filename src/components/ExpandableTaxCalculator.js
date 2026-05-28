@@ -3,32 +3,17 @@ import { motion, AnimatePresence } from 'framer-motion';
 import './ExpandableTaxCalculator.css';
 
 function formatCurrency(n) {
-  return 'Rs ' + Number(n).toLocaleString();
+  return 'Rs ' + Number(n).toLocaleString('en-PK', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 }
 
 function calculateTax(amount) {
-  // Simple progressive slabs example for demonstration
-  let tax = 0;
-  const slabs = [
-    { limit: 600000, rate: 0 },
-    { limit: 1200000, rate: 0.05 },
-    { limit: 2400000, rate: 0.125 },
-    { limit: 3600000, rate: 0.2 },
-    { limit: 6000000, rate: 0.25 },
-    { limit: Infinity, rate: 0.35 },
-  ];
-
-  let remaining = amount;
-  let lower = 0;
-  for (const slab of slabs) {
-    const taxable = Math.max(0, Math.min(remaining, slab.limit - lower));
-    tax += taxable * slab.rate;
-    remaining -= taxable;
-    lower = slab.limit;
-    if (remaining <= 0) break;
-  }
-
-  return Math.round(tax);
+  // Threshold-based rule: no tax up to Rs. 60,000 monthly; only extra is taxed.
+  const THRESHOLD = 60000;
+  const RATE = 0.0253; // 2.53%
+  if (!amount || amount <= THRESHOLD) return 0;
+  const extra = amount - THRESHOLD;
+  const tax = extra * RATE;
+  return Math.round(tax * 100) / 100; // keep two decimals
 }
 
 export default function ExpandableTaxCalculator() {

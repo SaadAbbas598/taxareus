@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Check, Mail, MapPin, Phone, X } from 'lucide-react';
 import './Footer.css';
 
@@ -24,6 +24,16 @@ const Footer = () => {
 
   const currentYear = new Date().getFullYear();
 
+  const navigate = useNavigate();
+
+  const handleLogoClick = () => {
+    if (window.location.pathname !== '/') {
+      navigate('/');
+    } else {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
+
   return (
     <footer className="footer" id="contact">
       <div className="container">
@@ -31,7 +41,14 @@ const Footer = () => {
         <div className="footer-grid">
           {/* Company Info */}
           <div className="footer-column">
-            <div className="footer-logo">
+            <div
+              className="footer-logo"
+              role="button"
+              tabIndex={0}
+              onClick={handleLogoClick}
+              onKeyDown={(e) => { if (e.key === 'Enter') handleLogoClick(); }}
+              aria-label="Go to homepage"
+            >
               <img src="/assets/logo.png" alt="TAX R US Logo" className="footer-logo-icon" />
               <div className="brand-name" aria-label="TaxRUs">
                 <span className="brand-text">TAX</span>
